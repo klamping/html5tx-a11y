@@ -15,6 +15,7 @@ http://paulirish.com/2012/accessibility-and-developers/
 
 # Slide Design
 http://zachholman.com/posts/slide-design-for-developers/
+http://www.slideshare.net/jessedee/you-suck-at-powerpoint-2
 
 # Font
 http://dyslexicfonts.com/
