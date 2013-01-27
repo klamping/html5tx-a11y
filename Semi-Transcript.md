@@ -77,39 +77,47 @@ Support for HTML5 by any particular browser is not going to be a yes/no question
 
 ...
 
-Looking at the new sectioning elements, we already have strong support through ARIA. ARIA has some of the same accessibility functions as HTML5, and it’s been around longer, so most newer-ish browsers support it, as well as most assistive technologies.
+Let's look at our new sectioning elements that we talked about. While browser accessibility support was on the low side, we already have strong support through ARIA. ARIA has some of the same accessibility functions as HTML5, and it’s been around longer, so most newer-ish browsers support it, as well as most assistive technologies.
 
-So backwards compatibility is pretty easy: just tag on a role attribute to your tag and you're mostly set. There are still old tech out there, but they just won't get the new func. They'll still have full access though.
+So backwards compatibility is pretty easy in this case: just tag on a role attribute to your tag and you're mostly set. There is still old technology out there, but in this case the functionality isn't essential. They still have full access to the content, it just won't be as easy to move around in.
 
 The nice thing about the HTML5 element is that it’s semantic HTML; that is, it provides meaning to the structure of the page. A div doesn’t do that. So if some browsers don’t support HTML5, but most support ARIA, what do you do? The answer is: use both.
 
-...
+For header, we add a role of banner. For footer, a role of contentinfo. I'm going to go through these fast, since you can just search for this information pretty easy. I also link to it on my Github resources page.
 
-Figure and fig caption
-New element. Used to add info to images/figures. Use in conjunction with aria-labelledby attr, then include alt attribute for final fallback. Drawback is it's too verbose, so use aria-hidden
+So for nav, we have navigation, aside we have complementary. The article element can have a role of article, but I marked it as red b/c I couldn't find support information on it. It's still safe to use and I recommend it.
 
-In HTML5, there’s something new we get to do with images, and that’s adding a caption that is semantically associated with the image. Of course you’ve always been able to add a caption – usually you just put the caption right below the image, maybe put both of them in a <div> with a nice border around it. But for anyone using a screen reader, the only association between the image and its caption was proximity, and that association wasn’t particularly strong.
+There is a section role, but it's an "abstract" role. Because of this, the ARIA spec asks us not to use it. You could use a role like "region", but there are some details about region that I don't want to get into right now. Take a look into it if you're interested.
 
-Now we have <figure> and <figcaption> that can be used to associate captions with images. <figure> doesn’t replace the <img> tag, instead it’s a container that holds both the <img> and the related <figcaption> (which is optional). It’s not something that’s needed for all images, though. <figure> is used when the image is an essential part of the page content, but can be moved outside the main flow of the page content. For example, a photo that illustrates a newspaper article can be somewhere off on the side, but it’s essential to the article. You wouldn’t use <figure> for other types of images like the logo in the page header.
+Okay, anyone in the audience thinking their site could use a quick update? This is a great quick win to improve the scanability of your website, particularly for screen reader users. Keyboard only users can also benefit if they're using a tool that can take advantage of these elements and roles.
 
-You can actually use <figure> for other types of content, like code samples, audio, video, charts, poems, etc. And even better: you aren’t limited to one image; perhaps you want to have three headshots with one caption (pictured, left to right are...). You can stick all those images inside one <figure> with one <figcaption>.
+How many of y'all out there have used the new audio and video tags? Personally, I haven't had a chance to work on a site that required these tags, but I do have a backlogged project that can take advantage of the audio tag and it's ability to easily start, stop and jump to certain sections of an audio clip. Anyway, for those of you who raised your hands; this section is for you.
 
-These elements are only minimally supported so far, so you should also use the aria-labelledby attribute on your caption.
+I've spent a lot of time talking about screen reader support, but just because your site works with a screen reader doesn't make it fully accessible. You also need to consider other groups, like users with limited mobility or deaf users. Parkinson's disease is one of the most common nervous system disorders of the elderly* and can cause shaking or tremors so much so that it makes using a device like a mouse very difficult. Instead, it's easier for folks to use a keyboard as their primary input device.
 
-... add details on how to use aria-labelled by (pulled from HTML5 accessibility book) ...
+*http://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0001762/
 
+HTML5 really helps here. It helps because it gives browsers a standard to follow and introduces built-in browser support. This means devs don't have to worry as much about create a video or audio player from scratch. They can take advantage of the built-in functionality and focus on the more inportant things.
 
-...
+One of the great things for accessibility when you use these elements is that since the browser provides the controls, they are much more likely to be accessible. Native keyboard support is already avialable in some browsers. This is in contrast to custom plugins, where you might only be able to use a mouse to play the video or audio.
 
-Audio and video
-Keyboard support
-Html5 really helps here, by standardizing and providing built-in support, so devs don't have to worry about it as much. It just works.
+If you decide to roll your own controls, be sure to use keyboard accessible elements for them, specifically the <button> tag. There are other ways to provide keyboard access through some ARIA techniques, so check them out if you're interested. The main point is, whether through browser native controls or custom ones, providing keyboard support with audio and video is much easier with HTML5.
 
-And one of the great things for accessibility when you use these elements is that since the browser provides the controls, they are much more likely to be accessible. For example, in Firefox and Opera, the media controls are accessible by using the keyboard. This is in contrast to some plugins, where you can only use a mouse to play the video.
+While <video> and <audio> are already partially or fully implemented in most of the newer browsers, keep in mind that you still need have a backup method to access the multimedia for browsers lacking support. That fallback can be a Flash-based player, assuming you have coded the Flash object to be accessible. Yes, Flash can be used to support accessibility.
 
-If you're wondering about video captioning, there isn’t a good solution in HTML5 yet.
+I meantion deaf users as well. Support for captioning is evolving. There's lots of hope for this, but unfortunately I won't have time to cover it. I recommend looking into for any audio or video content you have.
 
-<video> and <audio> are already partially or fully implemented in most of the newer browsers. But keep in mind, when using these elements, you need to put in a backup method to access the multimedia for browsers that don’t support the elements.
+Let's talk about some other new elements. In HTML5. Figure and Figcaption have been introduced as a way semantically associate information with images or figures. We’ve always been able to add a caption – usually you just put the caption right below the image, maybe put both of them in a <div> with a nice border around it. But for anyone using a screen reader, the only association between the image and its caption was proximity, and that association wasn’t particularly strong.
+
+Now we have <figure> and <figcaption> that can be used to associate captions with images. <figure> doesn’t replace the <img> tag, instead it’s a container that holds both the <img> and the related <figcaption>. It’s not something that’s needed for all images, though. <figure> is used when the image is an essential part of the page content, but can be moved outside the main flow of the page content. For example, a photo that illustrates a newspaper article can be somewhere off on the side, but it’s essential to the article. You wouldn’t use <figure> for other types of images like the logo in the page header.
+
+That being said, You can use <figure> for other types of content, like code samples, audio, video, charts, poems, etc. And even better: you aren’t limited to one image; perhaps you want to have three headshots with one caption (pictured, left to right are...). You can stick all those images inside one <figure> with one <figcaption>.
+
+These elements are only minimally supported so far, so you should also use the aria-labelledby attribute on your caption. You should also ensure that there's proper alt text avialable, in case none of these are supported. There's a drawback to all this, and that is that it can get too verbose. We can solve this by using another aria attribute called aria-hidden.
+
+Used in conjunction, we can...
+
+... add details on how to use aria-labelledby (pulled from HTML5 accessibility book) and aria-hidden ... test to make sure it works ...
 
 ...
 
