@@ -16,9 +16,11 @@ Some of the resources were actually used in the presentation, others were just i
 * [Accessibility in HTML5](http://www.clarissapeterson.com/2012/11/html5-accessibility)
 * [ARIA and Progressive Enhancement](http://alistapart.com/article/aria-and-progressive-enhancement)
 * [Accessibility and developers](http://paulirish.com/2012/accessibility-and-developers/)
+* [Accessible Client-side Form Validation with HTML5](http://www.deque.com/accessible-client-side-form-validation-html5)
+* [JAWS support for ARIA](http://www.paciellogroup.com/blog/2010/10/jaws-support-for-aria/)
+* [HTML5 and Accessibility (Slidedeck)](http://www.stanford.edu/group/accessibility/cgi-bin/presentations/html5_a11y/)
 
 # Slide Design
-<<<<<<< HEAD
 * [Slide Design for Developers](http://zachholman.com/posts/slide-design-for-developers/)
 * [You Suck at Powerpoint](http://www.slideshare.net/jessedee/you-suck-at-powerpoint-2)
 * [Red Metal by DAIM](http://gelaskins.com/gallery/DAIM/Red_Metal)

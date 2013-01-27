@@ -88,10 +88,54 @@ The nice thing about the HTML5 element is that it’s semantic HTML; that is, it
 Figure and fig caption
 New element. Used to add info to images/figures. Use in conjunction with aria-labelledby attr, then include alt attribute for final fallback. Drawback is it's too verbose, so use aria-hidden
 
+In HTML5, there’s something new we get to do with images, and that’s adding a caption that is semantically associated with the image. Of course you’ve always been able to add a caption – usually you just put the caption right below the image, maybe put both of them in a <div> with a nice border around it. But for anyone using a screen reader, the only association between the image and its caption was proximity, and that association wasn’t particularly strong.
+
+Now we have <figure> and <figcaption> that can be used to associate captions with images. <figure> doesn’t replace the <img> tag, instead it’s a container that holds both the <img> and the related <figcaption> (which is optional). It’s not something that’s needed for all images, though. <figure> is used when the image is an essential part of the page content, but can be moved outside the main flow of the page content. For example, a photo that illustrates a newspaper article can be somewhere off on the side, but it’s essential to the article. You wouldn’t use <figure> for other types of images like the logo in the page header.
+
+You can actually use <figure> for other types of content, like code samples, audio, video, charts, poems, etc. And even better: you aren’t limited to one image; perhaps you want to have three headshots with one caption (pictured, left to right are...). You can stick all those images inside one <figure> with one <figcaption>.
+
+These elements are only minimally supported so far, so you should also use the aria-labelledby attribute on your caption.
+
+... add details on how to use aria-labelled by (pulled from HTML5 accessibility book) ...
+
+
 ...
 
 Audio and video
 Keyboard support
-Html5 really helps here, by standardizing and providing built-in support, so devs don't have to worry about it. It just works
+Html5 really helps here, by standardizing and providing built-in support, so devs don't have to worry about it as much. It just works.
 
+And one of the great things for accessibility when you use these elements is that since the browser provides the controls, they are much more likely to be accessible. For example, in Firefox and Opera, the media controls are accessible by using the keyboard. This is in contrast to some plugins, where you can only use a mouse to play the video.
 
+If you're wondering about video captioning, there isn’t a good solution in HTML5 yet.
+
+<video> and <audio> are already partially or fully implemented in most of the newer browsers. But keep in mind, when using these elements, you need to put in a backup method to access the multimedia for browsers that don’t support the elements.
+
+...
+
+## Mobile Accessibility
+I don't have too much time to cover this, but it's worth mentioning two things.
+1) Yes, you do need to test your site on mobile devices (and yes, that includes content inside a Webview in an app)
+2) When using the new HTML5 input elements, because iOS is accessible by default, you not only make the form better for sighted users, you also make it accessible for non-sighted users. You don’t need to worry about that spinner being accessible, Apple’s already taken care of it for you.
+
+...
+
+## Testing
+
+If there's one thing I want to leave in your minds today, that's testing. You'd never release an HTML5 app into the wild without going through several rounds of rigorous testing; Accessibility testing is just the same.
+
+It’s important to understand that assistive technologies such as screen readers or speech recognition software don’t all work exactly the same, so you should test your website with these technologies as much as feasible.
+
+Apple computers have a built-in screen reader called VoiceOver, and if you have Windows, check out the free/open source NVDA. There isn’t a commonly-used free voice recognition application.
+
+Unfortunately some assistive technology out there can be pricey, so it's not always an option to test everything. This is unfortunate, since there are no guarentees out there. Just as a website might work in FF but break horribly in IE, a site may be accessible in NVDA and break horribly in JAWS. This is the nature of software development.
+
+If you're fortunate to work at a company with a sizable budget, request access to various assistive technologies. Just as you need the latest $600 phone to do mobile testing, you need the latest screen reader to do accessibility testing.
+
+## Closing Remarks
+
+The final thing I want to say, and this goes along with the testing remarks I just made, is that things may have already changed. Perhaps Chrome just released a new version of their browser that fully supports the <header> element. Or maybe NVDA has increased its support of ARIA. The content for this talk is a few months old, already. So test your stuff. Nothing is guaranteed.
+
+And if I got anything wrong, please file an issue on Github and I'll do my best to correct it in a timely manner.
+
+Thanks
