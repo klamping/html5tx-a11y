@@ -68,15 +68,31 @@ http://youtu.be/O2Tkj8SIHMU?t=4m47s
 
 It turns out that when you make your sites accessible, Stevie Wonder might just call you up to say thanks. But seriously, Steve Jobs made his products accessible, not to meet govt regulations or check off an item on the deliverable list, but for reasons like his love of music, He wanted to get that technology to everybody at a reasonable cost.
 
-So let's get to it: does HTML5 improve website accessibility or make it worse? How have screen readers adapted to the new technologies? Does HTML5 remove the need for WAI-ARIA or the need for accessibility testing all together?
+So let's get to it: Does HTML5 improve website accessibility or make it worse? How have screen readers adapted to the new technologies? Does HTML5 remove the need for WAI-ARIA or the need for accessibility testing all together?
 
 ...
 
-Backwards compatibility:
-Support for HTML5 by any particular browser is not going to be a yes/no question
+## Sectioning Elements
+Let's start off by talking about the new sectioning elements. How many of you have used one of these on your website? Great. Well, let's look at browser accessibility support for a couple of these elements.
+
+The header tag in IE, Safari and Opera are reported as div tags. This doesn't mean that these browsers don't support the tags, just that they don't properly tell the OS what they are. In chrome, the header tag is announced as a section. Only in Firefox does it get it right.
+
+But here's something else. That's for Windows browsers. It's different for Mac. On mac it's Opera, Chrome and Firefox mispronouncing the element. Safari is the lone browser that gets it right.
+
+I hould take a second to mention that this support information is provided by html5accessibility.com. Their most recent stats come from Septemeber of 2012, so things may have changed a little since then. Take all this with a grain of salt.
+
+How about footer? Well, the picture is much the same, but with Chrome joining the party. On the Mac side of things, Firefox makes the cut this time.
+
+Two elements down and support doesn't look great. Well, there's still hope. Accessibility support is actually a very broad term. This is because the browser isn't the only one responsible. It's also up to the assistive technology the person is using. Let's take a look at screen readers.
+
+
+---
+TODO add more content here
+---
 
 ...
 
+## Sectioning Redux
 Let's look at our new sectioning elements that we talked about. While browser accessibility support was on the low side, we already have strong support through ARIA. ARIA has some of the same accessibility functions as HTML5, and it’s been around longer, so most newer-ish browsers support it, as well as most assistive technologies.
 
 So backwards compatibility is pretty easy in this case: just tag on a role attribute to your tag and you're mostly set. There is still old technology out there, but in this case the functionality isn't essential. They still have full access to the content, it just won't be as easy to move around in.
@@ -91,6 +107,9 @@ There is a section role, but it's an "abstract" role. Because of this, the ARIA 
 
 Okay, anyone in the audience thinking their site could use a quick update? This is a great quick win to improve the scanability of your website, particularly for screen reader users. Keyboard only users can also benefit if they're using a tool that can take advantage of these elements and roles.
 
+...
+
+## Audio/Video
 How many of y'all out there have used the new audio and video tags? Personally, I haven't had a chance to work on a site that required these tags, but I do have a backlogged project that can take advantage of the audio tag and it's ability to easily start, stop and jump to certain sections of an audio clip. Anyway, for those of you who raised your hands; this section is for you.
 
 I've spent a lot of time talking about screen reader support, but just because your site works with a screen reader doesn't make it fully accessible. You also need to consider other groups, like users with limited mobility or deaf users. Parkinson's disease is one of the most common nervous system disorders of the elderly* and can cause shaking or tremors so much so that it makes using a device like a mouse very difficult. Instead, it's easier for folks to use a keyboard as their primary input device.
@@ -107,6 +126,9 @@ While <video> and <audio> are already partially or fully implemented in most of 
 
 I meantion deaf users as well. Support for captioning is evolving. There's lots of hope for this, but unfortunately I don't have time to cover it. I recommend looking into it for any audio or video content you have.
 
+...
+
+## Figure/Figcaption
 Let's talk about some other new elements. <figure> and <figcaption> have been introduced as a way semantically associate information with images or figures. We’ve always been able to add a caption – usually you just put the caption right below the image, maybe put both of them in a <div> with a nice border around it. But for anyone using a screen reader, the only association between the image and its caption was proximity, and that association wasn’t particularly strong.
 
 Now we have <figure> and <figcaption> that can be used to associate captions with images. <figure> doesn’t replace the <img> tag, instead it’s a container that holds both the <img> and the related <figcaption>. It’s not something that’s needed for all images, though. <figure> is used when the image is an essential part of the page content, but can be moved outside the main flow of the page content. For example, a photo that illustrates a newspaper article can be somewhere off on the side, but it’s essential to the article. You wouldn’t use <figure> for other types of images like the logo in the page header.
