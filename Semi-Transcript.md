@@ -105,19 +105,15 @@ If you decide to roll your own controls, be sure to use keyboard accessible elem
 
 While <video> and <audio> are already partially or fully implemented in most of the newer browsers, keep in mind that you still need have a backup method to access the multimedia for browsers lacking support. That fallback can be a Flash-based player, assuming you have coded the Flash object to be accessible. Yes, Flash can be used to support accessibility.
 
-I meantion deaf users as well. Support for captioning is evolving. There's lots of hope for this, but unfortunately I won't have time to cover it. I recommend looking into for any audio or video content you have.
+I meantion deaf users as well. Support for captioning is evolving. There's lots of hope for this, but unfortunately I don't have time to cover it. I recommend looking into it for any audio or video content you have.
 
-Let's talk about some other new elements. In HTML5. Figure and Figcaption have been introduced as a way semantically associate information with images or figures. We’ve always been able to add a caption – usually you just put the caption right below the image, maybe put both of them in a <div> with a nice border around it. But for anyone using a screen reader, the only association between the image and its caption was proximity, and that association wasn’t particularly strong.
+Let's talk about some other new elements. <figure> and <figcaption> have been introduced as a way semantically associate information with images or figures. We’ve always been able to add a caption – usually you just put the caption right below the image, maybe put both of them in a <div> with a nice border around it. But for anyone using a screen reader, the only association between the image and its caption was proximity, and that association wasn’t particularly strong.
 
 Now we have <figure> and <figcaption> that can be used to associate captions with images. <figure> doesn’t replace the <img> tag, instead it’s a container that holds both the <img> and the related <figcaption>. It’s not something that’s needed for all images, though. <figure> is used when the image is an essential part of the page content, but can be moved outside the main flow of the page content. For example, a photo that illustrates a newspaper article can be somewhere off on the side, but it’s essential to the article. You wouldn’t use <figure> for other types of images like the logo in the page header.
 
 That being said, You can use <figure> for other types of content, like code samples, audio, video, charts, poems, etc. And even better: you aren’t limited to one image; perhaps you want to have three headshots with one caption (pictured, left to right are...). You can stick all those images inside one <figure> with one <figcaption>.
 
-These elements are only minimally supported so far, so you should also use the aria-labelledby attribute on your caption. You should also ensure that there's proper alt text avialable, in case none of these are supported. There's a drawback to all this, and that is that it can get too verbose. We can solve this by using another aria attribute called aria-hidden.
-
-Used in conjunction, we can...
-
-... add details on how to use aria-labelledby (pulled from HTML5 accessibility book) and aria-hidden ... test to make sure it works ...
+These elements have limited supported so far, especially with screen readers. Using a role of 'group' on the figure element helps provide semantics, and you can also use the aria-labelledby attribute on your image to associate the content. For technology that supports neither HTML5 nor ARIA, you should provide an fallback using the alt attribute. Here's an example of one way you can do it. Associate the photo with the caption using simple textual language. It's not an ideal solution, but it's an option.
 
 ...
 
@@ -136,14 +132,14 @@ It’s important to understand that assistive technologies such as screen reader
 
 Apple computers have a built-in screen reader called VoiceOver, and if you have Windows, check out the free/open source NVDA. There isn’t a commonly-used free voice recognition application.
 
-Unfortunately some assistive technology out there can be pricey, so it's not always an option to test everything. This is unfortunate, since there are no guarentees out there. Just as a website might work in FF but break horribly in IE, a site may be accessible in NVDA and break horribly in JAWS. This is the nature of software development.
+Unfortunately some assistive technology out there can be pricey, so it's not always an option to test everything. This is unfortunate, since there are no guarentees out there. Just as a website might work in FF but break horribly in IE, a site may be accessible in NVDA and break horribly in JAWS. This is the nature of software development
 
 If you're fortunate to work at a company with a sizable budget, request access to various assistive technologies. Just as you need the latest $600 phone to do mobile testing, you need the latest screen reader to do accessibility testing.
 
 ## Closing Remarks
 
-The final thing I want to say, and this goes along with the testing remarks I just made, is that things may have already changed. Perhaps Chrome just released a new version of their browser that fully supports the <header> element. Or maybe NVDA has increased its support of ARIA. The content for this talk is a few months old, already. So test your stuff. Nothing is guaranteed.
+The final thing I want to say, and this goes along with the testing remarks I just made, is that things may have already changed. To quote Isaac Asimov, "It is change, continuing change, inevitable change, that is the dominant factor in society today. No sensible decision can be made any longer without taking into account not only the world as it is, but the world as it will be..."
 
-And if I got anything wrong, please file an issue on Github and I'll do my best to correct it in a timely manner.
+So test your stuff. Nothing is guaranteed. Speaking of, if I got anything wrong, please mention it now or file an issue on Github and I'll do my best to correct it in a timely manner.
 
 Thanks
