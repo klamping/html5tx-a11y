@@ -1,4 +1,6 @@
-Disclaimer: All this content is a work in progress. It only covers the first 40 or so slides. It is not an 1:1 transcript of the talk.
+Disclaimer: All this content is a work in progress. It is not an 1:1 transcript of the talk. Things are subject to change.
+
+All feedback is welcome.
 
 ----
 
@@ -83,25 +85,28 @@ I hould take a second to mention that this support information is provided by ht
 
 How about footer? Well, the picture is much the same, but with Chrome joining the party. On the Mac side of things, Firefox makes the cut this time.
 
-Two elements down and support doesn't look great. Well, there's still hope. Accessibility support is actually a very broad term. This is because the browser isn't the only one responsible. It's also up to the assistive technology the person is using. Let's take a look at screen readers.
+Two elements down and support isn't stellar. And the truth is, it's actually bleaker than this. Accessibility support is actually a very broad term. This is because the browser isn't the only one responsible for supporting new language. It's also up to the assistive technology the person is using. To understand this, we need to grasp the relationship between the browser and assistive technology like a screen reader.
 
+When you load a website, the browser will expose that website's structure to the OS. It does this through an Accessibility API. Without getting into too much details, this API is basically a middleman between the program being run and the assistive technology being used.
 
----
-TODO add more content here
----
+In this example, Safari talks to the Apple Accessibility API, which is being listened to by Voiceover. This is a simplification of what's going on, but that's okay. The point I'm trying to make is that support needs to happen in two place. Not only does the browser need to send the right information to the API, but the screen reader needs to be listening for that information.
 
-...
+So if you have a browser the fully exposes every HTML5 element to the Accessibility API, but your screen reader isn't listening for that content, then it's unsupported. This goes both ways; if the screen reader listens for content the browser doesn't speak, then it's equally as useless.
+
+The worst news is that, as most web developers know, users aren't the best at upgrading their technology. So while support may be introduced in newer technology, we still have to support the full spectrum. So does that mean all this semantic HTML being introduces is essentially useless until both browsers, assistive technology AND users upgrade their stuff?
+
+Well, when you're belt can't do the full job, it's time to put on suspenders.
 
 ## Sectioning Redux
-Let's look at our new sectioning elements that we talked about. While browser accessibility support was on the low side, we already have strong support through ARIA. ARIA has some of the same accessibility functions as HTML5, and it’s been around longer, so most newer-ish browsers support it, as well as most assistive technologies.
+Let's look again at our new sectioning elements that we talked about. While browser accessibility support was on the low side, there is good news still. How many of you have heard of ARIA?
 
-So backwards compatibility is pretty easy in this case: just tag on a role attribute to your tag and you're mostly set. There is still old technology out there, but in this case the functionality isn't essential. They still have full access to the content, it just won't be as easy to move around in.
+ARIA was introduced many years ago, before HTML5 was started, as a way of adding semantics to low-semantic elements. Since it was introduced a good while back, there is already strong support for ARIA out there. ARIA has a lot of the same semantics as HTML5, and because it’s been around longer most browsers support it, as well as most assistive technologies. So if some browsers don’t support HTML5, but most support ARIA, what do you do? The answer is: use both.
 
-The nice thing about the HTML5 element is that it’s semantic HTML; that is, it provides meaning to the structure of the page. A div doesn’t do that. So if some browsers don’t support HTML5, but most support ARIA, what do you do? The answer is: use both.
+By combining ARIA and HTML5, support improves dramtically. Just tag on a role attribute to your HTML5 element and you're set. Yes, there is still really old technology out there, but they still have full access to the content, it just won't be as easy to move around in. It's kind of like removing CSS for browsers older than IE7.
 
-For header, we add a role of banner. For footer, a role of contentinfo. I'm going to go through these fast, since you can just search for this information pretty easy. I also link to it on my Github resources page.
+So for header, we add a role of banner. For footer, a role of contentinfo. I'm going to go through these fast, since you can search for these ARIA roles pretty easy. I also link to it on my Github resources page.
 
-So for nav, we have navigation, aside we have complementary. The article element can have a role of article, but I marked it as red b/c I couldn't find support information on it. It's still safe to use and I recommend it.
+For nav, we have navigation; aside we have complementary. The article element can have a role of article, but I marked it as red b/c I couldn't find support information on it. It's still safe to use and I recommend it.
 
 There is a section role, but it's an "abstract" role. Because of this, the ARIA spec asks us not to use it. You could use a role like "region", but there are some details about region that I don't want to get into right now. Take a look into it if you're interested.
 

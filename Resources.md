@@ -12,15 +12,16 @@ Some of the resources were actually used in the presentation, others were just i
 * [WebAIM.org](http://webaim.org)
 * [MDN ARIA Techniques](https://developer.mozilla.org/en-US/docs/Accessibility/ARIA/ARIA_Techniques)
 * [W3C ARIA Spec - The Roles Model](http://www.w3.org/TR/wai-aria/roles)
+* [Creative Commons Search](http://search.creativecommons.org/)
 
 # Articles
-* [Steve Jobs gave 'the blind eyes; the deaf ears' -- Stevie Wonder](http://latimesblogs.latimes.com/music_blog/2011/10/steve-jobs-death-cancer-stevie-wonder-disability.html)
 * [WCAG 2.0 Simplified Checklist](http://thebookpile.files.wordpress.com/2011/07/wcag2-simplified-checklist-v0-1.pdf)
 * [Accessibility in HTML5](http://www.clarissapeterson.com/2012/11/html5-accessibility)
 * [ARIA and Progressive Enhancement](http://alistapart.com/article/aria-and-progressive-enhancement)
 * [Accessibility and developers](http://paulirish.com/2012/accessibility-and-developers/)
 * [Accessible Client-side Form Validation with HTML5](http://www.deque.com/accessible-client-side-form-validation-html5)
 * [HTML5 and Accessibility (Slidedeck)](http://www.stanford.edu/group/accessibility/cgi-bin/presentations/html5_a11y/)
+* [HTML5: Techniques for providing useful text alternatives](http://dev.w3.org/html5/alt-techniques/#m6)
 
 # Support Information
 * [JAWS support for ARIA](http://www.paciellogroup.com/blog/2010/10/jaws-support-for-aria/)
@@ -42,6 +43,9 @@ http://www.flickr.com/photos/oakleyoriginals/7944244598/
 # Font
 * [OpenDyslexic](http://dyslexicfonts.com/)
 
+# Quotations
+* [Steve Jobs gave 'the blind eyes; the deaf ears' -- Stevie Wonder](http://latimesblogs.latimes.com/music_blog/2011/10/steve-jobs-death-cancer-stevie-wonder-disability.html)
+* [Isaac Asimov Quotes](http://www.goodreads.com/quotes/110684-it-is-change-continuing-change-inevitable-change-that-is-the)
 
 <!-- Images Needed for Amazon referral tracking -->
 <img src="http://www.assoc-amazon.com/e/ir?t=cibomediserv-20&l=as2&o=1&a=1590596382" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
