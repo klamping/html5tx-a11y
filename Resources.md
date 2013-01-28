@@ -22,11 +22,13 @@ Some of the resources were actually used in the presentation, others were just i
 * [Accessible Client-side Form Validation with HTML5](http://www.deque.com/accessible-client-side-form-validation-html5)
 * [HTML5 and Accessibility (Slidedeck)](http://www.stanford.edu/group/accessibility/cgi-bin/presentations/html5_a11y/)
 * [HTML5: Techniques for providing useful text alternatives](http://dev.w3.org/html5/alt-techniques/#m6)
+* [PubMed Health - Parkinson's disease](http://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0001762/)
 
 # Support Information
 * [JAWS support for ARIA](http://www.paciellogroup.com/blog/2010/10/jaws-support-for-aria/)
 * [ARIA Landmark role support tests](http://www.html5accessibility.com/tests/landmarks.html)
 * [The State Of HTML5 Video - Text Tracks](http://www.longtailvideo.com/html5/#texttrack)
+* [WebVTT support in browsers](http://www.w3.org/community/texttracks/2012/08/23/webvtt-support-in-browsers/)
 
 # Slide Design
 * [Slide Design for Developers](http://zachholman.com/posts/slide-design-for-developers/)
@@ -39,6 +41,7 @@ Some of the resources were actually used in the presentation, others were just i
 
 # Photo Attribution
 http://www.flickr.com/photos/oakleyoriginals/7944244598/
+http://www.flickr.com/photos/seandreilinger/2137302514/
 
 # Font
 * [OpenDyslexic](http://dyslexicfonts.com/)
@@ -46,6 +49,7 @@ http://www.flickr.com/photos/oakleyoriginals/7944244598/
 # Quotations
 * [Steve Jobs gave 'the blind eyes; the deaf ears' -- Stevie Wonder](http://latimesblogs.latimes.com/music_blog/2011/10/steve-jobs-death-cancer-stevie-wonder-disability.html)
 * [Isaac Asimov Quotes](http://www.goodreads.com/quotes/110684-it-is-change-continuing-change-inevitable-change-that-is-the)
+* [A Magazine Is An iPad That Does Not Work (Video)](http://www.youtube.com/watch?v=kJZSLvTK4pw)
 
 <!-- Images Needed for Amazon referral tracking -->
 <img src="http://www.assoc-amazon.com/e/ir?t=cibomediserv-20&l=as2&o=1&a=1590596382" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
