@@ -23,6 +23,8 @@ Some of the resources were actually used in the presentation, others were just i
 * [HTML5 and Accessibility (Slidedeck)](http://www.stanford.edu/group/accessibility/cgi-bin/presentations/html5_a11y/)
 * [HTML5: Techniques for providing useful text alternatives](http://dev.w3.org/html5/alt-techniques/#m6)
 * [PubMed Health - Parkinson's disease](http://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0001762/)
+* [HTML5 Canvas Accessibility in Firefox 13](http://www.paciellogroup.com/blog/2012/06/html5-canvas-accessibility-in-firefox-13/)
+* [HTML5 Canvas Accessibility (Slides)](http://www-03.ibm.com/able/dwnlds/SXSW_2012_HTML5_Canvas_Accessibility.pdf)
 
 # Support Information
 * [JAWS support for ARIA](http://www.paciellogroup.com/blog/2010/10/jaws-support-for-aria/)
@@ -42,6 +44,7 @@ Some of the resources were actually used in the presentation, others were just i
 # Photo Attribution
 http://www.flickr.com/photos/oakleyoriginals/7944244598/
 http://www.flickr.com/photos/seandreilinger/2137302514/
+http://www.iconarchive.com/show/scrap-icons-by-deleket/Magnifying-Glass-2-icon.html
 
 # Font
 * [OpenDyslexic](http://dyslexicfonts.com/)
