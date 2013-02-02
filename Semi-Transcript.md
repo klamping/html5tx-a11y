@@ -1,10 +1,8 @@
-Disclaimer: All this content is a work in progress. It is not an 1:1 transcript of the talk. Things are subject to change.
-
-All feedback is welcome.
+Disclaimer: All this content is a work in progress. It is not an 1:1 transcript of the talk. Things are subject to change. All feedback is welcome.
 
 ----
 
-Hello everyone, welcome to "What HTML5 Means for Web Accessibility". My name is Kevin Lamping and I do Front-end Web Development and try to do it in an accessible manner. I'm a native Texan, born and raised in Boerne, Texas. I've lived in Texas all my life, including a few years in Austin as a Web Developer then a High School teacher. I'm currently living 75 minutes south of here, in San Antonio, with my wife and son.
+Hello everyone, welcome to "What HTML5 Means for Web Accessibility". My name is Kevin Lamping and I do Front-end Web Development and try to do it in an accessible manner. I'm a native Texan, born and raised in Boerne, Texas. I've lived in Texas all my life, including a few years in Austin as a Web Developer then a High School teacher. I'm currently live a short drive south of here in San Antonio with my wife and son, who is pictured here.
 
 As I mentioned, I'm involved with accessible web development and have been for a little over six years. I first got into it back in 2007 during my first job out of college. I was working with two other great developers and we were tasked with making an eye care site accessible. Pardon the pun, but it really opened my eyes to accessibility from a technology perspective. Okay, they say you need to open your talk with a joke, but they never specify that it needs to be a good one.
 
@@ -43,22 +41,23 @@ So why do we do it? What makes it worth the effort? Well, I like to think about 
 
 Luckily, it turns out accessibility is good for you. Accessibility is just usability for the real world. How many of y'all are parents out there? Anyone a parent of a toddler? This is a photo my son took. He's barely three and knows how to work a camera phone. He knows how to open youtube on my phone and get to his favorite video clips. He gets confused when I'm working on my laptop and he can't scroll the screen down with his finger. Any other parents out there with similar experiences? Has anyone seen their child try and use a magazine like they use an ipad? It's pretty cute.
 
-Speaking of the ipad, there was an interview with Stevie Wonder about why Steve Jobs was important to him. I wish I could read the entire interview for you, since every thing Stevie says in that article is is inspirational. But since we don't have all afternoon, I'll read out my favorite parts:
+Speaking of the ipad, a short bit before Steve Jobs passed, a famous singer had some unusual praise for the man. Let's listen in:
+http://youtu.be/O2Tkj8SIHMU?t=4m47s
+
+("I want you all to give a hand to someone that you know whose health is very bad at this time," Stevie Wonder said. "His company took the challenge in making his technology accessible to everyone. In the spirit of caring and moving the world forward, Steve Jobs. Because there's nothing on the iPhone or iPad that you can do that I can't do. As a matter of fact, i can be talking to you, you can be looking at me, and I can be doing whatever I need to do and you don't even know what I'm doing!")
+
+Did anyone have trouble hearing that? Would it have been nice to have captions available? Even when you don't have a physical disability, supporting accessibility
+TODO finish this thought.
+
+After Jobs dies, Stevie Wonder had some more to say about why Steve was so important to him. I wish I could read the entire interview for you, since every thing Stevie says in that article is is inspirational. But since we don't have all afternoon, I'll read out my favorite parts:
 
 “The one thing people aren’t talking about is how he has made his technology accessible to the blind and the deaf and people who are quadriplegics and paraplegics. He has affected not just my world, but the world of millions of people who without that technology would not be able to discover the world.”
 
-“He developed Garage Band [recording and music editing software], so now a 15-year-old kid can be in his bedroom with his iPad playing around with Garage Band and come up with unbelievable ideas, which can then be taken to the next level… He has leveled the playing field.”
+“He developed Garage Band, so now a 15-year-old kid can be in his bedroom with his iPad playing around with Garage Band and come up with unbelievable ideas, which can then be taken to the next level… He has leveled the playing field.”
 
 That quote reminds me of my son, who, at one year old, started "recording" his own music in garage band. It's amazing that the simple act of getting the mouse out of the way gave my son access to using technology to create.
 
 This is usability and accessibility combined. Here's Stevie again, “His company was the first to come up with technology that made it accessible without screaming out loud, ‘This is for the blind, this is for the deaf.’ He made it part of the actual unit itself; there were applications inside the technology that allowed you to use it or not use it"
-
-This next quote is best said by the man himself. This was filmed a short while before Steve died.
-http://youtu.be/O2Tkj8SIHMU?t=4m47s
-
-TODO add captioning in presentation (maybe using track element)
-
-("I want you all to give a hand to someone that you know whose health is very bad at this time," Stevie Wonder said. "His company took the challenge in making his technology accessible to everyone. In the spirit of caring and moving the world forward, Steve Jobs. Because there's nothing on the iPhone or iPad that you can do that I can't do. As a matter of fact, i can be talking to you, you can be looking at me, and I can be doing whatever I need to do and you don't even know what I'm doing!")
 
 Here's some more from the article.
 “I’m just hoping that his life [...] will encourage [and challenge] those who are living still [...] to do what he has done, [...] you just make it one of your applications, it’s in your technology. That will then create a world that will be accessible to anyone with any physical disability"
